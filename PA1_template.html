@@ -148,6 +148,9 @@ head(activity)</code></pre>
 <h3>Get mean</h3>
 <pre class="r"><code>mean(stepsPerDay)</code></pre>
 <pre><code>## [1] 9354.23</code></pre>
+<pre class="r"><code>median(stepsPerDay)</code></pre>
+<pre><code>## [1] 10395</code></pre>
+<p>Mean is 9354.23. Median is 10395.</p>
 </div>
 </div>
 <div id="what-is-the-average-daily-activity-pattern" class="section level2">
@@ -174,6 +177,7 @@ rowOfMax</code></pre>
 <pre class="r"><code>maxInterval &lt;-  gsub(&quot;([0-9]{1,2})([0-9]{2})&quot;, &quot;\\1:\\2&quot;, avgDaily[rowOfMax,'interval'])
 maxInterval</code></pre>
 <pre><code>## [1] &quot;8:35&quot;</code></pre>
+<p>Interval is 8:30 - 8:35.</p>
 </div>
 </div>
 <div id="imputing-missing-values" class="section level2">

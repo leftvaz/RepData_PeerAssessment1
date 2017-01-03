@@ -45,6 +45,17 @@ mean(stepsPerDay)
 ## [1] 9354.23
 ```
 
+```r
+median(stepsPerDay)
+```
+
+```
+## [1] 10395
+```
+Mean is 9354.23.
+Median is 10395. 
+
+
 ## What is the average daily activity pattern?
 ### Create a time series plot
 
@@ -88,7 +99,7 @@ maxInterval
 ```
 ## [1] "8:35"
 ```
-
+Interval is 8:30 - 8:35. 
 
 ## Imputing missing values
 ### Count missing values
