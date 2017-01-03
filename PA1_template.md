@@ -150,6 +150,29 @@ median(dailySteps)
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
+### Create weekday, weekend variable
+
+```r
+activityFilled$dayType <-  ifelse(as.POSIXlt(activityFilled$date)$wday %in% c(0,6), 'weekend', 'weekday')
+```
+
+### Panel plot with times series plot for intervals and average steps across weekdays and weekends
+
+```r
+avgStepsInWeek <- aggregate(steps ~ interval + dayType, data=activityFilled, mean)
+
+library(ggplot2)
+ggplot(avgStepsInWeek, aes(interval, steps)) +      
+  geom_line() + 
+  facet_grid(dayType ~ .) 
+```
+
+![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+
+
+
+
+
 
 
 
